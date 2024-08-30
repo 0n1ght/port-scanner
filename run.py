@@ -1,4 +1,5 @@
 import socket
+from sys import argv
 
 def scan(target, num_ports):
     for port in range(1, num_ports + 1):
@@ -14,4 +15,7 @@ def scan_port(ip_address, port):
         print("[-] Port {} Closed".format(port))
 
 for i in range(49650, 50000):
-    scan_port("192.168.100.168", i)
+    if len(argv) > 1:
+        scan_port(argv[1], i)
+    else:
+        print("Wrong format. Please follow this pattern to run the script: python run.py <ip>")
