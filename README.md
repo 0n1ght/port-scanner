@@ -1,2 +1,2 @@
 # port-scanner
-Simple port scanner using Python.
+Simple port scanner written in Python.
